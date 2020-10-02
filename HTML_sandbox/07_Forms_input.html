@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & input</title>
+</head>
+<body>
+    <!--Our form-->
+    <form action=""> <!--action attribute 
+                            -> Where the file will be submitted to e.g. php database -->
+        
+        <!--Name-->
+        <div> <!--Divisions: Help you divide your markup-->
+            <label for="name">Name</label><br>
+            <!-- if "for"=="id" -> true : Input is highlighted when label is clicked-->
+            <input type="name" id = "name" name = "name" value = "Vick Lopez"> 
+        </div> 
+
+        <!--Email-->
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="vlopez0392@gmail.com"> 
+            <!--Client-side validation is done here -->
+        </div>
+
+        <!--Message-->
+        <div>
+            <label for="message">Message</label><br>
+            <textarea name = "message" id = "message" cols = "50" rows = "5"></textarea>
+        </div>
+
+        <!--Select list: Add the selected attribute to the option you want preselected -->
+        <div>
+            <label for="sex">Sex</label><br>
+            <select name="sex" id="sex">
+                <option value="m">Male</option>
+                <option value="f" selected>Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!--Age-->
+        <div>
+            <label for="age">Age</label><br>
+            <input type="number" name = "age", id = "age">
+        </div>
+
+        <!--Birthdate-->
+        <div>
+            <label for="birthdate">Birthdate</label><br>
+            <input type="date" name="birthdate" id="birthdate">
+        </div>
+
+        <!--Radio buttons: Add a checked attribute to any button you want selected by default-->
+        <div>
+            <label for="Membership">Membership</label>
+           
+            <input type="radio" name ="membership" value = "Simple" id = "Membership"> Simple
+           
+            <input type="radio" name ="membership" value = "Standard" id = "Membership" checked> Standard
+            
+            <input type="radio" name ="membership" value = "Super" id = "Membership"> Super
+        </div>
+
+        <!--Checkboxes-->
+        <div>
+            <label for="likes">I like...</label>
+            <input type="checkbox" name ="likes" value = "bike" id = "likes"> Bike
+           
+            <input type="checkbox" name ="likes" value = "bar" id = "likes"> 
+            Car
+            
+            <input type="checkbox" name ="likes" value = "boat" id = "likes"> 
+            Boat
+        </div>
+
+        <!--Submit form button-->
+        <div>
+            <input type="submit" value = "Submit">
+            <!--<button type = "submit">Submit</button> -->
+            
+        <!--Reset button-->
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
