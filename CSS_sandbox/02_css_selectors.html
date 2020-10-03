@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+
+    <style>
+
+        /* Selectors */ 
+        
+        /* 1. Affects all h2 elements */
+        /* 
+        
+        h2{ 
+            color:green;
+        } 
+        
+        */
+
+        /* 2. Affects all h2 elements with id = "green-heading" */
+        /* 
+        
+        h2#green-heading{
+            color:green;
+        } 
+        
+        */
+
+        /* 3. Class selector */
+        .primary-heading{  /* Better naming convention for headers*/
+            color:teal; /* Try to futureproof your naming selections*/
+        }
+
+
+        /****************Other selectors ***********************************/
+        #welcome{
+            background-color: #f4f4f4f4;
+        } 
+
+        #about{
+            color:#f4f4f4
+        }
+
+        /*Multiple selectors -- Any html tag, class or id may be targeted */
+        #welcome, #about{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        /*Nested selectors: Targets specific elements within specific containers*/
+
+        #welcome p{  /*All paragraphs within welcome will be targeted*/
+            font-size: 20px;
+        }
+
+        /*Body styling */
+        body{
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id = "welcome">
+        <h2 class = "primary-heading" >Welcome</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae illo enim cupiditate dolores fugiat quia, nisi deleniti eligendi nesciunt nobis?</p>
+    </div>
+    <div id = "about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ratione reprehenderit magnam expedita aperiam distinctio quos perferendis quas optio maxime!</p>
+    </div>
+</body>
+</html>
