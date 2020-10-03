@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div, span, id & class</title>
+</head>
+<body>
+    <!--Some useful definitions: -->
+    <!--1. The HTML id attribute is used to specify a unique id for an HTML element. Id's must be unique.-->
+    <!--2. The class is an attribute which specifies one or more class names for an HTML element. Classes may be used by more than one html tag-->
+    
+    <!-- Using both id's and classes is very convenient. However it is not-->
+
+    <!--div is a block element while span is an inline element-->
+
+
+    <!--Some CSS style to demonstrate the use of a class -->
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            background: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .enhance{
+            color:indigo;
+            background: cadetblue;
+        }
+
+    </style>
+
+    <div id = "main-header" class="card">
+        <h1>My website</h1>
+        <p>A site about me</p>
+    </div>
+    <ul id = "main_nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div id="about" class = "card">
+        <h3>About</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium excepturi odio porro <span class = "enhance">cumque. Quas maiores eos nemo iste numquam.</span>  Fuga eaque itaque nemo quos dicta qui beatae odio placeat deleniti at. Eveniet explicabo unde accusamus quas laboriosam, nobis perspiciatis.</p>
+    </div>
+
+    <div id="Contact" class = "card">
+        <h3>Contact me</h3>
+        <ul>
+            <li>Address: 50 Main St, Boston MA</li>
+            <li>Phone: (555) 555-5555</li>
+            <li>Email: me@somethingcool.com</li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <p>Copyright &copy; 2019</p>
+    </div>
+</body>
+</html>
