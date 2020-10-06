@@ -9,16 +9,7 @@
 
         /* Selectors */ 
         
-        /* 1. Affects all h2 elements */
-        /* 
-        
-        h2{ 
-            color:green;
-        } 
-        
-        */
-
-        /* 2. Affects all h2 elements with id = "green-heading" */
+        /* 1. (ID SELECTOR )Affects all elements with id = "green-heading" */
         /* 
         
         h2#green-heading{
@@ -27,13 +18,6 @@
         
         */
 
-        /* 3. Class selector */
-        .primary-heading{  /* Better naming convention for headers*/
-            color:teal; /* Try to futureproof your naming selections*/
-        }
-
-
-        /****************Other selectors ***********************************/
         #welcome{
             background-color: #f4f4f4f4;
         } 
@@ -42,20 +26,28 @@
             color:#f4f4f4
         }
 
-        /*Multiple selectors -- Any html tag, class or id may be targeted */
+        /* 2. (CLASS SELECTOR )Class selector */
+        .primary-heading{  /* Better naming convention for headers*/
+            color:teal; /* Try to futureproof your naming selections*/
+        }
+
+
+        /****************Other selectors ***********************************/
+
+        /*3. Multiple selectors -- Any html tag, class or id may be targeted */
         #welcome, #about{
             border: 1px solid #ccc;
             padding: 10px;
             margin-bottom: 5px;
         }
 
-        /*Nested selectors: Targets specific elements within specific containers*/
+        /*4. Nested selectors: Targets specific elements within specific containers*/
 
         #welcome p{  /*All paragraphs within welcome will be targeted*/
             font-size: 20px;
         }
 
-        /*Body styling */
+        /*5. Element selector */
         body{
             background-color: #333;
         }

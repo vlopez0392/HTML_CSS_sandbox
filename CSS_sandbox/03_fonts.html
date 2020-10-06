@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">   <!-- Embedding a CSS font-->
+
+    <style>
+        body{   /*Selector for the body, affects the font of the whole page*/
+
+            font-family: 'Roboto', sans-serif; 
+                          /*Font stack:A list of different fonts */
+                          /*Font stack members are selected from left to right, If a font is not found, the chosen font is the next one in the stack and so on. Always consider web-safe fonts*/ 
+
+            /*Absolute units: 1px = 1/96 in, pt = 1/72 in  pica = 1/6 in*/
+            font-size:18px; 
+            line-height: 1.6em; /*Controls line spacing, 1.6em looks good*/
+        }
+
+        #welcome p span{
+            font-weight: 600;
+        }
+
+
+        #about p span{
+            font-style:oblique;
+        }
+
+
+    </style>
+</head>
+<body>
+        <div id = "welcome">
+        <h2 class = "primary-heading" >Welcome</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae illo enim cupiditate dolores <span>fugiat quia, nisi deleniti eligendi</span> nesciunt nobis?</p>
+    </div>
+    <div id = "about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ratione reprehenderit magnam <span>expedita aperiam distinctio quos perferendis</span> quas optio maxime!</p>
+    </div>
+</body>
+</html>
