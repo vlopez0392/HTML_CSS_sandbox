@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and align</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4 em;
+        }
+
+        .box{
+            background: #f4f4f4;
+            border: 1px solid #333;
+            padding: 20px; 
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            /*Text align property */
+            text-align: justify; /*left, right and center are also available*/
+        }
+
+        /* Centering the body of our layout by using margin and container (wrapper) */
+        .container{
+
+            /*width: 960px;  Does not account for responsive design, use max-width instead*/
+            max-width: 960px;
+            margin: 30px auto;   /* 30 px tb and auto lr */
+        }
+
+        .clr{
+            clear: both;
+        }
+
+        #box-2{
+            float: left;   
+            width: 68%;
+        }
+
+        #box-3{
+            float:right;
+            width: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box-1" class="box">
+            <h3>Heading</h3>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, reprehenderit explicabo. Tempore, possimus. Officia necessitatibus quia porro tempore alias quod!
+        </div>
+        <div id="box-2" class="box">
+            <h3>Heading</h3>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, reprehenderit explicabo. Tempore, possimus. Officia necessitatibus quia porro tempore alias quod!
+        </div>
+        <div id="box-3" class="box">
+            <h3>Heading</h3>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, reprehenderit explicabo. Tempore, possimus. Officia necessitatibus quia porro tempore alias quod!
+        </div>
+
+        <div class="clr"></div>
+
+        <div id="box-4" class="box">
+            <h3>Heading</h3>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, reprehenderit explicabo. Tempore, possimus. Officia necessitatibus quia porro tempore alias quod!
+        </div>
+    </div>
+</body>
+</html>
