@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline & block styling</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+        /*Display is very important, with display we can implement flexbox and cssgrid*/
+        
+        li{ /* li's are block level element by default, we can change it's display property to inline
+                Horizontal menus*/
+        display: inline;
+
+        }
+        
+        li a{
+            padding-right: 20px;
+        }
+
+        /*Inline to block - An image is an inline element by default*/
+        /*Let's use display:block such that we can modify the margin property to auto*/
+
+        img{
+            display: block;
+            margin:auto;
+        }
+
+        .box{
+            display: inline-block; /*A mix of inline and block properties, allows an inline display*/
+                                   /*But maintains the behavior of block level elements  */
+            width: 32.8%;
+            background:#f4f4f4;
+            padding: 20px;
+            margin-bottom: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Fashion</a></li>
+    </ul>
+
+    <br><br>
+    <img src="img/leaf.png" alt="My image">
+
+    <br><br>
+    <div class="box">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aut pariatur dignissimos! Quos id beatae officia aperiam et laborum nulla.</p>        
+    </div>
+
+    <div class="box">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aut pariatur dignissimos! Quos id beatae officia aperiam et laborum nulla.</p>        
+    </div>
+
+    <div class="box">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aut pariatur dignissimos! Quos id beatae officia aperiam et laborum nulla.</p>        
+    </div>
+</body>
+</html>
