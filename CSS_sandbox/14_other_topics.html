@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test File</title>
+    <style>
+
+        h1{
+            /* display: none; Removes the targeted element, useful in responsive design and mobile applications. */
+
+            /* Visibility */    
+            /* visibility: hidden; Does not remove the element, rather ir makes it invisible. Not commonly used */
+            color:blue !important;
+        }
+
+        /*Order of precedence*/
+        .hello{
+            color:red; /* Overrides the color:blue; declaration above . 
+                            Targeting a class takes precedence over targeting elements. */
+
+                        /* !important -> This flag sets the highest precedence to the elements that use it  */
+        
+            
+        /*Negative margin values -> Can be used however it is recommended no to use them*/
+            margin-top:30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 class ="hello">Hello World</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam officia esse earum enim ipsum praesentium reprehenderit, iste nam neque. Doloribus.</p>
+</body>
+
+</html>
