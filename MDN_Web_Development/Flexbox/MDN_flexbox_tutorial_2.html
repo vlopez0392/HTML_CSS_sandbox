@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDN flexbox tutorial 2</title>
+<style>
+    *{ 
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        margin: 40px auto;
+        max-width: 960px;
+    }
+
+    #flex-container{
+        border: #000 solid 1px;
+        height: 200px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #flex-container .btn{
+        text-align: center;
+        text-decoration: none;
+        margin: 5px;
+        padding: 5px;
+        background: #333;
+        color: #f4f4f4;
+        border: 1px #000 solid;
+        height: 1.2rem;
+    }
+
+</style>    
+</head>
+<body>
+    <div id="flex-container">
+        <a id = "btn1" class = "btn" href="#">Smile</a>
+        <a id = "btn2" class = "btn" href="#">Laugh</a>
+        <a id = "btn3" class = "btn" href="#">Wink</a>
+        <a id = "btn4" class = "btn" href="#">Shrug</a>
+        <a id = "btn5" class = "btn" href="#">Blush</a>
+    </div>
+</body>
+</html>
