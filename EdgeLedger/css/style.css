@@ -98,7 +98,7 @@ img{
     margin: 20px 0 30px;
 }
 
-.hero::before{
+.hero::before{ /* Controls the overlay color, placed before (on top) the content div*/
     content: '';
     position: absolute;
     top: 0;
@@ -111,3 +111,4 @@ img{
 .hero *{
     z-index:10;
 }
+
