@@ -1,19 +1,55 @@
+/*Utility classes - Serve as a built-in framework*/
+
+
 /*Text colors*/
-.text-primary {
+.text-primary{
     color: #28a745;
 }
 
-.text-secondary {
+.text-secondary{
     color: #0284d0;
 }
 
-/* Button */
-.btn {
+/*Navbar*/
+.navbar{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    opacity: 0.8;
+    width:100%;
+    height:70px;
+    position: fixed;
+    top:0px;
+    padding: 0 30px;
+}
+
+.navbar a{
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: #28a745 2px solid;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar .logo{
+    font-weight:400;
+}
+
+/*Button utility classes*/
+.btn{
     cursor: pointer;
-    display: inline-block;
+    display:inline-block;
     padding: 10px 30px;
     color: #fff;
-    background:  #28a745;
+    background-color: #28a745;
     border: none;
     border-radius: 5px;
 }
@@ -47,38 +83,32 @@
     border: 1px solid #fff;
 }
 
-/*Icons*/
-.icons {
-    padding: 30px;
+/*Hero*/
+.hero::before{ 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
 }
 
-.icons h3{
-    font-weight: bold;
-    margin-top: 15px;
+.hero *{
+    z-index: 1;
 }
 
-.icons i{ /*We can use custom properties for this... Later!*/
-    background: #28a745;
-    color: #fff;
-    padding: 1rem;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
+/*Flex items*/
 .flex-items{
     display:flex;
     text-align: center;
     justify-content: center;
-    align-items: center;
     height: 100%;
-}
-.flex-items > div { /*> operator selects all the direct children of a particular selector*/
-    padding: 20px;
 }
 
 /*Flex columns*/
 .flex-columns .row{
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
@@ -86,24 +116,24 @@
 
 .flex-columns .column{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     flex-basis: 100%;
-    flex:1;
+    flex: 1;
 }
 
 .flex-columns .column .column-1, 
-.flex-columns .column .column-2 {
+.flex-columns .column .column-2{
     height:100%;
 }
 
 .flex-columns img{
-    width:100%;
-    height:100%;
-    object-fit: cover; /*Fixes imaage distortion issues, covers the available area without distorting images*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .flex-columns .column-2{
-    display: flex;
+    display:flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -111,7 +141,7 @@
 }
 
 .flex-columns h2{
-    font-size: 40px;
+    font-size:40px;
     font-weight: 100;
 }
 
@@ -120,5 +150,40 @@
 }
 
 .flex-columns p{
+    margin-bottom: 20px 0;
+}
+
+/*Section header*/
+.section-header{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-header h2{
+    font-size: 40px;
     margin: 20px 0;
+}
+
+.section-padding{
+    padding: 20px 20px 40px;
+}
+
+.flex-grid .row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.flex-grid .column{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+/*Blog*/
+.flex-columns.flex-reverse .row{
+    flex-direction: row-reverse;
 }
