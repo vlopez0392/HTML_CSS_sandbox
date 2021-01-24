@@ -106,6 +106,10 @@
     height: 100%;
 }
 
+.flex-items > div {
+    padding: 20px;
+}
+
 /*Flex columns*/
 .flex-columns .row{
     display: flex;
