@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        /*Similar to keyframe animations. However transitions are triggered with an event (e.g. hovering over something)*/
+        body{
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box{
+            background: white;
+            width: 100px;
+            height: 100px;
+            
+            /* transition-property: background;
+            transition-duration: 1s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in-out; */
+            
+            /*Transition shorthand*/
+            /* transition: background, border-radius 2s ease-in-out;  */
+        
+            /*Transition all - Applies the transition to all the properties in the event*/
+            transition: all 2s ease-in-out; 
+        }
+
+        .box:hover{
+            background: red;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+</html>

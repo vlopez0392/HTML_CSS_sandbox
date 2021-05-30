@@ -1,0 +1,26 @@
+/*Transitions*/
+
+body{
+    background: #333;
+}
+
+.box{
+    background: #fff;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    margin-top: 200px;
+    /* transition-property: background, border-radius, transform; */
+    transition-property: all;
+    transition-duration: 1s; 
+    transition-timing-function: ease-in;
+}
+
+/*Properties which we can apply transitions must have an identifiable halfway point, e.g. you can't use the display property*/
+
+.box:hover{
+    background: teal;
+    border-radius: 50%;
+    transform: rotateX(180deg);
+}

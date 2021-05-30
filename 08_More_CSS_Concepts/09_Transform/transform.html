@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body{
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box{
+            background: white;
+            width: 300px;
+            height: 300px;
+
+            /*No animation*/
+            /*Rotate*/
+            /* transform: rotate(25deg); */
+        
+            /*Skew - Useful for showcase areas (Layouts with diagonal lines)*/
+            /* transform: skew(25deg); */
+
+            /*Scale*/
+            /* transform: scale(2); Doubles element in size */
+        
+            transition: all 1s ease-in-out;
+        }
+
+        .box:hover{
+            /* transform: rotate(180deg); */
+            /*transform: scale(2)*/
+
+            /* transform: translateX(100px) */
+            /* transform: translateY(100px); */
+            
+            /*Using translate with two values results in a 2D movement*/
+            transform: translate(100px, 100px); /*translate3d improves performance*/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+</html>

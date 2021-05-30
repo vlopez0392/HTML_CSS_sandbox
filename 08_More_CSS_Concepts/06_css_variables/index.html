@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style> 
+        
+        :root{ 
+        /*Any variable you create in the root scope you can use anywhere in the document*/
+
+        /*Using variables is convenient when you need to repeat a value several times - This avoids editing all the properties that use said value.*/
+
+            --primary-color: #333;
+            --secondary-color: #ccc;
+            --light-color: #f4f4f4;
+
+        /*The layout's width is major propoerty and thus it makes sense to put in a variable*/
+            --max-width: 1100px;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+            background: var(--light-color);
+        }
+
+        header{
+            background: var(--primary-color);
+            color: #fff;
+            border-bottom: 5px var(--secondary-color) solid;
+            text-align: center;
+        }
+
+        .container{
+            display: flex;
+            margin: auto;
+            max-width: var(--max-width);
+        }
+
+        .box{
+            background: var(--primary-color);
+            border-bottom: 5px var(--secondary-color) solid;;
+            color: #fff;
+            padding: 1rem;
+            margin: 1rem;
+
+            /*These variables will only be used in the box scope*/
+            --box-1-width: 1;
+            --box-2-width: 2;
+        }
+
+        .box-1{
+            flex: var(--box-1-width);
+        }
+
+        .box-2{
+            flex: var(--box-2-width)
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Variables</h1>
+    </header>
+
+    <div class="container">
+        <div class="box box-1">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quibusdam vero quisquam libero, maiores fugiat.</p>
+        </div>
+
+        <div class="box box-2">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quibusdam vero quisquam libero, maiores fugiat.</p>
+        </div>
+    </div>
+</body>
+</html>

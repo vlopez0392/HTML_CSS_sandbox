@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes 1</title>
+
+    <style>
+        /*Animations: Keyframes and transitions 
+        - You take a property that can be animated (i.e. has midpoints and is able to change) 
+        - Examples: width(0px -> 600px, a grow animation), position (fade things in and out)        
+        */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background: #333;
+        }
+
+        .box{
+            background: white;
+            width: 200px;
+            height: 200px;
+            position: relative;
+
+            /*keyframes*/
+            /* animation-name: animate1;
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out; */
+
+            /*animation shorthand*/
+            animation: animate1 5s infinite forwards 2s alternate ease-in-out;
+        }
+
+        @keyframes animate1{
+            from{
+                top:0;
+                width: 200px;
+            }to{
+                top: 300px;
+                background-color:red;
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

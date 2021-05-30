@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After pseudoSelectors</title>
+    <style>
+        /*Practical use 1 - Required fields in a form*/
+        .is-required:after{
+            content: '*'; /*Inserted into the view through CSS, we can also style it!*/
+            color: red;
+            padding-left: 2px;
+        }
+
+        /* Practical use 2 - Can also be used in image overlays*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #333;
+            color: #fff;
+        }
+
+        header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header > h1{
+            font-size: 4rem;
+            margin: 1rem;
+        }
+
+        header:before{
+            content: '';
+            background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+            opacity: 0.4; /*Makes the image darker, text also if we style this in .header!*/
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Required field example -->
+    <!-- Insert elements before and after another element -->
+    <!-- <label for="name" class = "is-required">Name</label>
+    <input type="text"> -->
+
+    <!-- Landing page with overlay example -->
+    <header>
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, asperiores?</p>
+    </header>
+
+    <section>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ipsam nisi, magnam sapiente, esse nihil dolores voluptate rem hic, ut ratione cupiditate dicta fugiat nobis commodi repudiandae consequatur veniam libero.</p>
+    </section>
+</body>
+</html>
