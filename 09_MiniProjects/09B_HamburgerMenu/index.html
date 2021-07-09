@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamburger Menu Overlay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/menu.css">
 </head>
@@ -12,10 +15,29 @@
     <div class="menu-wrap">
         <input type="checkbox" class = "toggler">
         <div class="hamburger">
-            <div> <!--Empty div-->
+            <div> <!--Empty nested div - Weird structure but through this we will achieve the desired behavior -->
 
             </div>
         </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    <header id = "showcase">
+        <div class="container showcase-container">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatum nemo perspiciatis odio expedita delectus blanditiis sequi nobis repudiandae? Repellat!</p>
+            <a href="" class ="btn">Read More</a>
+        </div>
+    </header>
 </body>
 </html>
